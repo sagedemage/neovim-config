@@ -20,3 +20,4 @@ cp init.lua ~/.config/nvim/init.lua
 
 ## Resources
 * [Getting started using Lua in Neovim](https://github.com/nanotee/nvim-lua-guide#defining-mappings)
+* [Everything you need to know to configure neovim using lua](https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua/)
