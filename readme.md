@@ -17,3 +17,6 @@ cp init.lua ~/.config/nvim/init.lua
   <li> vim-plug: https://github.com/junegunn/vim-plug </li>
   <li> nerdtree: https://github.com/preservim/nerdtree </li>
 </ol>
+
+## Resources
+* [Getting started using Lua in Neovim](https://github.com/nanotee/nvim-lua-guide#defining-mappings)
