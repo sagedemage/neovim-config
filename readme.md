@@ -13,7 +13,7 @@ cp init.lua ~/.config/nvim/init.lua
 ```
 
 ## Install rust-analyzer Language Server Binary
-Install rust-analyzer binary for it to work with rust-tools plugin
+You must install rust-analyzer binary for it to work with rust-tools plugin
 
 Make local bin directory
 ```
