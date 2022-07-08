@@ -16,6 +16,8 @@ cp init.lua ~/.config/nvim/init.lua
 <ol>
   <li> vim-plug: https://github.com/junegunn/vim-plug </li>
   <li> nerdtree: https://github.com/preservim/nerdtree </li>
+  <li> vim-go: https://github.com/fatih/vim-go </li>
+  <li> COC: https://github.com/neoclide/coc.nvim </li>
 </ol>
 
 ## Resources
