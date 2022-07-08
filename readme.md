@@ -12,6 +12,25 @@ Copy this config to the vim configuration file
 cp init.lua ~/.config/nvim/init.lua
 ```
 
+## Install rust-analyzer Language Server Binary
+Install rust-analyzer binary for it to work with rust-tools plugin
+
+Make local bin directory
+```
+$ mkdir -p ~/.local/bin
+```
+
+Get rust-analyzer binary
+```
+$ curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
+```
+
+Make rust-analyzer binary executable
+```
+$ chmod +x ~/.local/bin/rust-analyzer
+```
+
+
 ## plugins
 <ol>
   <li> vim-plug: https://github.com/junegunn/vim-plug </li>
