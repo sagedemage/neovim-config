@@ -14,6 +14,17 @@ Plug('neoclide/coc.nvim', { branch = 'release'})
 -- vim-go
 Plug('fatih/vim-go', { ['do'] = ':GoUpdateBinaries'})
 
+-- rust tools
+Plug 'neovim/nvim-lspconfig'
+Plug 'simrat39/rust-tools.nvim'
+
+-- Debugging (rust-tools)
+Plug 'nvim-lua/plenary.nvim'
+Plug 'mfussenegger/nvim-dap'
+
+-- rust.vim
+-- Plug 'rust-lang/rust.vim'
+
 -- Initialize plugin system
 vim.call('plug#end')
 
@@ -45,4 +56,12 @@ vim.api.nvim_set_keymap('n', '<leader>n', ':NERDTreeFocus<CR>', { noremap = true
 vim.api.nvim_set_keymap('n', '<C-n>', ':NERDTree<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-t>', ':NERDTreeToggle<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-f>', ':NERDTreeFind<CR>', { noremap = true })
+
+require('rust-tools').setup({})
+
+vim.api.nvim_exec([[
+	syntax enable
+	filetype plugin indent on
+]]
+, true)
 
