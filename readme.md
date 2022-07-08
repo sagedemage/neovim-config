@@ -1,5 +1,5 @@
 # neovim-config
-My configuration of vim using the vim plugin manager.
+My configuration of neovim using the vim plugin manager.
 
 ## Setup instructions
 
@@ -9,7 +9,7 @@ cd neovim-config
 ```
 Copy this config to the vim configuration file
 ```
-cp init.vim ~/.config/nvim/init.vim
+cp init.lua ~/.config/nvim/init.lua
 ```
 
 ## plugins
