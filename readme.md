@@ -3,13 +3,20 @@ My configuration of neovim using the vim plugin manager.
 
 ## Setup instructions
 
-go to the neovim-config folder
+Go to the neovim-config folder
 ```
 cd neovim-config
 ```
+
 Copy this config to the vim configuration file
 ```
 cp init.lua ~/.config/nvim/init.lua
+```
+
+Install vim plug plugin manager
+```
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 
 Install all the vim plug extensions
