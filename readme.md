@@ -33,10 +33,12 @@ Install Go language server using gopls for Golang
 :CocInstall coc-go
 ```
 
-## vim plug plugins
+## Plugin Manager
 1. [vim-plug](https://github.com/junegunn/vim-plug)
-2. [nerdtree](https://github.com/preservim/nerdtree)
-3. [COC](https://github.com/neoclide/coc.nvim)
+
+## vim plug plugins
+1. [nerdtree](https://github.com/preservim/nerdtree)
+2. [COC](https://github.com/neoclide/coc.nvim)
 
 ## coc plugins
 1. [coc-rust-analyzer](https://github.com/fannheyward/coc-rust-analyzer)
