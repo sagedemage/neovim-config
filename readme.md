@@ -18,9 +18,9 @@ Install all the vim plug extensions
 ```
 
 ## Install language extensions
-Install rust analyzer plugin
+Install rust analyzer plugin for Rust
 ```
-:CocInstall coc-rust-analyzer for Rust
+:CocInstall coc-rust-analyzer
 ```
 
 Install pyright extentsion for Python
