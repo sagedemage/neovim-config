@@ -34,18 +34,14 @@ Install Go language server using gopls for Golang
 ```
 
 ## vim plug plugins
-<ol>
-  <li> vim-plug: https://github.com/junegunn/vim-plug </li>
-  <li> nerdtree: https://github.com/preservim/nerdtree </li>
-  <li> COC: https://github.com/neoclide/coc.nvim </li>
-</ol>
+1. [vim-plug](https://github.com/junegunn/vim-plug)
+2. [nerdtree](https://github.com/preservim/nerdtree)
+3. [COC](https://github.com/neoclide/coc.nvim)
 
 ## coc plugins
-<ol>
-  <li> coc-rust-analyzer: https://github.com/fannheyward/coc-rust-analyzer </li>
-  <li> coc-pyright: https://github.com/fannheyward/coc-pyright </li>
-  <li> coc-go: https://github.com/josa42/coc-go </li>
-</ol>
+1. [coc-rust-analyzer](https://github.com/fannheyward/coc-rust-analyzer)
+2. [coc-pyright](https://github.com/fannheyward/coc-pyright)
+3. [coc-go](https://github.com/josa42/coc-go)
 
 ## Resources
 * [Getting started using Lua in Neovim](https://github.com/nanotee/nvim-lua-guide#defining-mappings)
