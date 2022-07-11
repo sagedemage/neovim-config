@@ -51,6 +51,7 @@ Install Go language server using gopls for Golang
 ## vim plug plugins
 1. [nerdtree](https://github.com/preservim/nerdtree)
 2. [COC](https://github.com/neoclide/coc.nvim)
+3. [auto-pairs](https://github.com/jiangmiao/auto-pairs)
 
 ## COC plugins
 1. [coc-tsserver](https://github.com/neoclide/coc-tsserver)
