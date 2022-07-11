@@ -25,6 +25,11 @@ Install all the vim plug extensions
 ```
 
 ## Install language extensions
+Install tsserver extension for JavaScript and TypeScript
+```
+:CocInstall coc-tsserver
+```
+
 Install rust analyzer plugin for Rust
 ```
 :CocInstall coc-rust-analyzer
@@ -48,9 +53,10 @@ Install Go language server using gopls for Golang
 2. [COC](https://github.com/neoclide/coc.nvim)
 
 ## coc plugins
-1. [coc-rust-analyzer](https://github.com/fannheyward/coc-rust-analyzer)
-2. [coc-pyright](https://github.com/fannheyward/coc-pyright)
-3. [coc-go](https://github.com/josa42/coc-go)
+1. [coc-tsserver](https://github.com/neoclide/coc-tsserver)
+2. [coc-rust-analyzer](https://github.com/fannheyward/coc-rust-analyzer)
+3. [coc-pyright](https://github.com/fannheyward/coc-pyright)
+4. [coc-go](https://github.com/josa42/coc-go)
 
 ## Resources
 * [Getting started using Lua in Neovim](https://github.com/nanotee/nvim-lua-guide#defining-mappings)
