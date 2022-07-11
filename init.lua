@@ -11,6 +11,9 @@ Plug 'preservim/nerdtree'
 -- COC
 Plug('neoclide/coc.nvim', { branch = 'release'})
 
+-- Auto Pairs
+Plug 'jiangmiao/auto-pairs'
+
 -- Initialize plugin system
 vim.call('plug#end')
 
@@ -42,4 +45,3 @@ vim.api.nvim_set_keymap('n', '<leader>n', ':NERDTreeFocus<CR>', { noremap = true
 vim.api.nvim_set_keymap('n', '<C-n>', ':NERDTree<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-t>', ':NERDTreeToggle<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-f>', ':NERDTreeFind<CR>', { noremap = true })
-
