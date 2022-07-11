@@ -52,7 +52,7 @@ Install Go language server using gopls for Golang
 1. [nerdtree](https://github.com/preservim/nerdtree)
 2. [COC](https://github.com/neoclide/coc.nvim)
 
-## coc plugins
+## COC plugins
 1. [coc-tsserver](https://github.com/neoclide/coc-tsserver)
 2. [coc-rust-analyzer](https://github.com/fannheyward/coc-rust-analyzer)
 3. [coc-pyright](https://github.com/fannheyward/coc-pyright)
