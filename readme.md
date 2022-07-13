@@ -14,9 +14,14 @@ Go to the neovim-config folder
 cd neovim-config
 ```
 
+Create nvim directory
+```
+mkdir ~/.config/nvim
+```
+
 Copy this config to the vim configuration file
 ```
-cp init.lua ~/.config/nvim/init.lua
+cp -v init.lua ~/.config/nvim/init.lua
 ```
 
 Install all the vim plug extensions
