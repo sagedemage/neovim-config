@@ -14,6 +14,9 @@ Plug('neoclide/coc.nvim', { branch = 'release'})
 -- Auto Pairs
 Plug 'jiangmiao/auto-pairs'
 
+-- Vim Instant Markdown Preview
+Plug('instant-markdown/vim-instant-markdown', {['for'] = 'markdown', ['do'] = 'yarn install'})
+
 -- Initialize plugin system
 vim.call('plug#end')
 
@@ -35,6 +38,12 @@ vim.opt.hidden=true
 -- COC bindings
 vim.api.nvim_set_keymap('i', '<c-space>', 'coc#refresh()', { silent = true, expr = true })
 
+-- Instant Markdown Preview
+vim.g['instant_markdown_autostart'] = 0
+
+-- Instant Markdown Keybinding
+vim.api.nvim_set_keymap('n', '<C-p>', ':InstantMarkdownPreview<CR>', { silent = true })
+vim.api.nvim_set_keymap('n', '<C-x>', ':InstantMarkdownStop<CR>', { silent = true })
 
 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 -- delays and poor user experience.
@@ -45,3 +54,4 @@ vim.api.nvim_set_keymap('n', '<leader>n', ':NERDTreeFocus<CR>', { noremap = true
 vim.api.nvim_set_keymap('n', '<C-n>', ':NERDTree<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-t>', ':NERDTreeToggle<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-f>', ':NERDTreeFind<CR>', { noremap = true })
+
