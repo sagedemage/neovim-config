@@ -17,6 +17,14 @@ Plug 'jiangmiao/auto-pairs'
 -- Vim Instant Markdown Preview
 Plug('instant-markdown/vim-instant-markdown', {['for'] = 'markdown', ['do'] = 'yarn install'})
 
+-- Vim Signify
+if vim.fn.has('nvim') or vim.fn.has('patch-8.0.902')
+	then
+  	Plug 'mhinz/vim-signify'
+else
+	Plug('mhinz/vim-signify', { branch = 'legacy' })
+end
+
 -- Initialize plugin system
 vim.call('plug#end')
 
@@ -47,7 +55,7 @@ vim.api.nvim_set_keymap('n', '<C-x>', ':InstantMarkdownStop<CR>', { silent = tru
 
 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 -- delays and poor user experience.
-vim.opt.updatetime=300
+vim.opt.updatetime=100
 
 -- nerdtree bindings
 vim.api.nvim_set_keymap('n', '<leader>n', ':NERDTreeFocus<CR>', { noremap = true })
