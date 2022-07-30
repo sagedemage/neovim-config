@@ -28,6 +28,9 @@ end
 -- Initialize plugin system
 vim.call('plug#end')
 
+-- Set map leader to space
+vim.g.mapleader=vim.api.nvim_replace_termcodes('<space>', true, true, true)
+
 -- 4 spaces for tab
 vim.opt.tabstop=4
 
@@ -50,8 +53,8 @@ vim.api.nvim_set_keymap('i', '<c-space>', 'coc#refresh()', { silent = true, expr
 vim.g['instant_markdown_autostart'] = 0
 
 -- Instant Markdown Keybinding
-vim.api.nvim_set_keymap('n', '<C-p>', ':InstantMarkdownPreview<CR>', { silent = true })
-vim.api.nvim_set_keymap('n', '<C-x>', ':InstantMarkdownStop<CR>', { silent = true })
+vim.api.nvim_set_keymap('n', '<leader>p', ':InstantMarkdownPreview<CR>', { silent = true })
+vim.api.nvim_set_keymap('n', '<leader>s', ':InstantMarkdownStop<CR>', { silent = true })
 
 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 -- delays and poor user experience.
