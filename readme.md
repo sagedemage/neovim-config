@@ -1,7 +1,7 @@
 # neovim-config
 My configuration of neovim using the vim plugin manager.
 
-## Setup instructions For Linux
+## Setup Instructions For Linux
 
 Install vim plug plugin manager ([vim-plug installation](https://github.com/junegunn/vim-plug#installation))
 ```
@@ -24,7 +24,7 @@ Copy this config to the neovim config directory
 cp -v init.lua ~/.config/nvim/init.lua
 ```
 
-## Setup instructions For Windows
+## Setup Instructions For Windows
 
 Install vim plug plugin manager ([vim-plug installation](https://github.com/junegunn/vim-plug#installation)) 
 ```
