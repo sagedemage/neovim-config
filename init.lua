@@ -52,21 +52,12 @@ vim.opt.updatetime=300
 
 -- COC bindings
 -- Use <c-space> to trigger completion.
-vim.api.nvim_set_keymap('i', '<c-space>', 'coc#refresh()', { silent = true, expr = true })
-
--- Use tab for trigger completion with characters ahead and navigate.
--- NOTE: There's always complete item selected by default, you may want to enable
--- no select by `"suggest.noselect": true` in your configuration file.
--- NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
--- other plugin before putting this into your config.
-
-vim.cmd([[
-inoremap <silent><expr> <TAB>
-    \ coc#pum#visible() ? coc#pum#next(1) :
-    \ CheckBackspace() ? "\<Tab>" :
-    \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-]])
+if vim.fn.has('nvim')
+	then
+	vim.api.nvim_set_keymap('i', '<c-space>', 'coc#refresh()', { silent = true, expr = true })
+else
+	vim.api.nvim_set_keymap('i', '<c-@>', 'coc#refresh()', { silent = true, expr = true })
+end
 
 -- Make <CR> to accept selected completion item or notify coc.nvim to format
 -- <C-g>u breaks current undo, please make your own choice.
