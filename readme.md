@@ -1,5 +1,5 @@
 # neovim-config
-My configuration of neovim using the vim plugin manager.
+My configuration of Neovim using extensions.
 
 ## Setup Instructions for Linux
 
