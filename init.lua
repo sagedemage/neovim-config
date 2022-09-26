@@ -17,6 +17,12 @@ Plug 'jiangmiao/auto-pairs'
 -- Vim Instant Markdown Preview
 Plug('instant-markdown/vim-instant-markdown', {['for'] = 'markdown', ['do'] = 'yarn install'})
 
+-- Vim JS
+Plug 'yuezk/vim-js'
+
+-- Vim JSX Pretty
+Plug 'maxmellon/vim-jsx-pretty'
+
 -- Vim Signify
 if vim.fn.has('nvim') or vim.fn.has('patch-8.0.902')
 	then
