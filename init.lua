@@ -65,17 +65,6 @@ else
 	vim.api.nvim_set_keymap('i', '<c-@>', 'coc#refresh()', { silent = true, expr = true })
 end
 
--- Make <CR> to accept selected completion item or notify coc.nvim to format
--- <C-g>u breaks current undo, please make your own choice.
-
-vim.cmd([[
-
-autocmd FileType python let b:coc_root_patterns = ['.git', '.env', 'venv', '.venv', 'setup.cfg', 'setup.py', 'pyproject.toml', 'pyrightconfig.json']
-
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-]])
-
 -- Instant Markdown Preview
 vim.g['instant_markdown_autostart'] = 0
 
@@ -88,4 +77,19 @@ vim.api.nvim_set_keymap('n', '<leader>n', ':NERDTreeFocus<CR>', { noremap = true
 vim.api.nvim_set_keymap('n', '<C-n>', ':NERDTree<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-t>', ':NERDTreeToggle<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-f>', ':NERDTreeFind<CR>', { noremap = true })
+
+-- Vim Script Commands
+
+-- Configures the python dependency discovery when checking performing syntax checking with python source code
+
+vim.cmd([[
+	autocmd FileType python let b:coc_root_patterns = ['.git', '.env', 'venv', '.venv', 'setup.cfg', 'setup.py', 'pyproject.toml', 'pyrightconfig.json']
+]])
+
+-- Make COC accept auto complete when pressing enter key
+
+vim.cmd([[
+	inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+		\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+]])
 
