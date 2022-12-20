@@ -31,6 +31,9 @@ else
 	Plug('mhinz/vim-signify', { branch = 'legacy' })
 end
 
+-- Vim Astro
+Plug 'wuelnerdotexe/vim-astro'
+
 -- Initialize plugin system
 vim.call('plug#end')
 
