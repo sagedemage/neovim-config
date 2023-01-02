@@ -73,8 +73,12 @@ vim.g['instant_markdown_autostart'] = 0
 vim.api.nvim_set_keymap('n', '<leader>p', ':InstantMarkdownPreview<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '<leader>s', ':InstantMarkdownStop<CR>', { silent = true })
 
--- file navigation bindings
-vim.api.nvim_set_keymap('n', '<C-t>', ':Vex<CR>', { noremap = true })
+-- File Explorer bindings
+-- Open File Explorer
+vim.api.nvim_set_keymap('n', '<leader>e', ':Ex<CR>', { noremap = true })
+
+-- Close Buffer
+vim.api.nvim_set_keymap('n', '<leader>c', ':bd<CR>', { noremap = true })
 
 -- Vim Script Commands
 
