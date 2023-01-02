@@ -34,6 +34,7 @@ Plug 'wuelnerdotexe/vim-astro'
 -- Initialize plugin system
 vim.call('plug#end')
 
+
 -- Set map leader to space
 vim.g.mapleader=vim.api.nvim_replace_termcodes('<space>', true, true, true)
 
@@ -89,4 +90,10 @@ vim.cmd([[
 	inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
 		\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 ]])
+
+-- Disable mouse
+vim.cmd([[
+	set mouse=
+]])
+
 
