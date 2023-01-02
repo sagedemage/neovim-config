@@ -5,9 +5,6 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
--- Nerdtree
-Plug 'preservim/nerdtree'
-
 -- COC
 Plug('neoclide/coc.nvim', { branch = 'release'})
 
@@ -75,11 +72,8 @@ vim.g['instant_markdown_autostart'] = 0
 vim.api.nvim_set_keymap('n', '<leader>p', ':InstantMarkdownPreview<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '<leader>s', ':InstantMarkdownStop<CR>', { silent = true })
 
--- nerdtree bindings
-vim.api.nvim_set_keymap('n', '<leader>n', ':NERDTreeFocus<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-n>', ':NERDTree<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-t>', ':NERDTreeToggle<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-f>', ':NERDTreeFind<CR>', { noremap = true })
+-- file navigation bindings
+vim.api.nvim_set_keymap('n', '<C-t>', ':Vex<CR>', { noremap = true })
 
 -- Vim Script Commands
 
