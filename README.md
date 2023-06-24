@@ -54,44 +54,12 @@ Install all the vim plug extensions
 :PlugInstall
 ```
 
-## Install language extensions
-Install tsserver extension for JavaScript and TypeScript
-```
-:CocInstall coc-tsserver
-```
-
-Install rust analyzer plugin for Rust
-```
-:CocInstall coc-rust-analyzer
-```
-
-Install pyright extentsion for Python
-```
-:CocInstall coc-pyright
-```
-
-Install Go language server using gopls for Golang
-```
-:CocInstall coc-go
-```
-
 ## Plugin Manager
 1. [vim-plug](https://github.com/junegunn/vim-plug)
 
 ## vim plug plugins
-1. [nerdtree](https://github.com/preservim/nerdtree)
-2. [COC](https://github.com/neoclide/coc.nvim)
-3. [auto-pairs](https://github.com/jiangmiao/auto-pairs)
-4. [vim-instant-markdown](https://github.com/instant-markdown/vim-instant-markdown)
-5. [vim-js](https://github.com/yuezk/vim-js) 
-6. [vim-jsx-pretty](https://github.com/MaxMEllon/vim-jsx-pretty) 
-7. [vim-signify](https://github.com/mhinz/vim-signify)
-
-## COC plugins
-1. [coc-tsserver](https://github.com/neoclide/coc-tsserver)
-2. [coc-rust-analyzer](https://github.com/fannheyward/coc-rust-analyzer)
-3. [coc-pyright](https://github.com/fannheyward/coc-pyright)
-4. [coc-go](https://github.com/josa42/coc-go)
+1. [rust-lang/rust.vim](https://github.com/rust-lang/rust.vim) 
+2. [vim-signify](https://github.com/mhinz/vim-signify)
 
 ## Resources
 * [Getting started using Lua in Neovim](https://github.com/nanotee/nvim-lua-guide#defining-mappings)
