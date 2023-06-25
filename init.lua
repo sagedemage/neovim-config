@@ -14,6 +14,10 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/nvim-cmp'
 
+-- For vsnip users
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+
 -- vim-signify (git VCS)
 if vim.fn.has('nvim') or vim.fn.has('patch-8.0.902')
 	then
