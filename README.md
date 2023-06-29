@@ -29,6 +29,8 @@ Install all the vim plug extensions
 2. [vim-signify](https://github.com/mhinz/vim-signify)
 3. [simrat39/rust-tools.nvim](https://github.com/simrat39/rust-tools.nvim)
 4. [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+5. [yuezk/vim-js](https://github.com/yuezk/vim-js)
+6. [maxmellon/vim-jsx-pretty](https://github.com/MaxMEllon/vim-jsx-pretty)
 
 ## Resources
 * [Getting started using Lua in Neovim](https://github.com/nanotee/nvim-lua-guide#defining-mappings)
