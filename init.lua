@@ -32,6 +32,12 @@ if vim.fn.has('nvim') or vim.fn.has('patch-8.0.902')
 	-- Rust tools to extend rust analyzer
 	Plug 'simrat39/rust-tools.nvim'
 
+	-- Vim JS
+	Plug 'yuezk/vim-js'
+
+	-- Vim JSX Pretty
+	Plug 'maxmellon/vim-jsx-pretty'
+
 	-- Initialize plugin system
 	vim.call('plug#end')
 
