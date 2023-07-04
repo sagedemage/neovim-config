@@ -18,52 +18,60 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
+-- Vim Instant Markdown
+Plug('instant-markdown/vim-instant-markdown', {['for'] = 'markdown', ['do'] = 'yarn install'})
+
 -- vim-signify (git VCS)
-if vim.fn.has('nvim') or vim.fn.has('patch-8.0.902')
-	then
-		Plug 'mhinz/vim-signify'
-	else
-		Plug('mhinz/vim-signify', { branch = 'legacy' })
-	end
+if vim.fn.has('nvim') or vim.fn.has('patch-8.0.902') then 
+	Plug 'mhinz/vim-signify'
+else 
+	Plug('mhinz/vim-signify', { branch = 'legacy' })
+end
 
-	-- Neovim lspconfig
-	Plug "neovim/nvim-lspconfig"
+-- Neovim lspconfig
+Plug "neovim/nvim-lspconfig"
 
-	-- Rust tools to extend rust analyzer
-	Plug 'simrat39/rust-tools.nvim'
+-- Rust tools to extend rust analyzer
+Plug 'simrat39/rust-tools.nvim'
 
-	-- Vim JS
-	Plug 'yuezk/vim-js'
+-- Vim JS
+Plug 'yuezk/vim-js'
 
-	-- Vim JSX Pretty
-	Plug 'maxmellon/vim-jsx-pretty'
+-- Vim JSX Pretty
+Plug 'maxmellon/vim-jsx-pretty'
 
-	-- Initialize plugin system
-	vim.call('plug#end')
+-- Initialize plugin system
+vim.call('plug#end')
 
-	-- Set map leader to space
-	vim.g.mapleader = vim.api.nvim_replace_termcodes('<space>', true, true, true)
+-- Set map leader to space
+vim.g.mapleader = vim.api.nvim_replace_termcodes('<space>', true, true, true)
 
-	-- 4 spaces for tab
-	vim.opt.tabstop = 4
+-- 4 spaces for tab
+vim.opt.tabstop = 4
 
-	-- Set tab insert space
-	vim.opt.shiftwidth = 4
+-- Set tab insert space
+vim.opt.shiftwidth = 4
 
-	-- Enable automatic running of :RustFmt when you save a buffer
-	vim.g["rustfmt_autosave"] = 1
+-- Enable automatic running of :RustFmt when you save a buffer
+vim.g["rustfmt_autosave"] = 1
 
-	-- Open file explorer
-	vim.api.nvim_set_keymap('n', '<leader>e', ':Explore<CR>', { noremap = true })
+-- Open file explorer
+vim.api.nvim_set_keymap('n', '<leader>e', ':Explore<CR>', { noremap = true })
 
-	-- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-	-- delays and poor user experience.
-	vim.opt.updatetime = 300
+-- Instant Markdown Preview
+vim.g['instant_markdown_autostart'] = 0
 
-	-- Rust tools configuration
-	local opts = {
-		tools = { -- rust-tools options
+-- Instant Markdown Keybinding
+vim.api.nvim_set_keymap('n', '<leader>p', ':InstantMarkdownPreview<CR>', { silent = true })
+vim.api.nvim_set_keymap('n', '<leader>s', ':InstantMarkdownStop<CR>', { silent = true })
 
+-- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+-- delays and poor user experience.
+vim.opt.updatetime = 300
+
+-- Rust tools configuration
+local opts = {
+	tools = { -- rust-tools options
 		-- how to execute terminal commands
 		-- options right now: termopen / quickfix
 		executor = require("rust-tools.executors").termopen,
@@ -215,7 +223,7 @@ if vim.fn.has('nvim') or vim.fn.has('patch-8.0.902')
 				"x11",
 			},
 		},
-	},
+	}, -- end tools
 
 	-- all the opts to send to nvim-lspconfig
 	-- these override the defaults set by rust-tools.nvim
@@ -234,7 +242,7 @@ if vim.fn.has('nvim') or vim.fn.has('patch-8.0.902')
 			name = "rt_lldb",
 		},
 	},
-}
+} -- end opts
 
 require('rust-tools').setup(opts)
 
@@ -246,9 +254,6 @@ cmp.setup({
 		-- REQUIRED - you must specify a snippet engine
 		expand = function(args)
 			vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-			-- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-			-- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-			-- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
 		end,
 	},
 	window = {
@@ -265,9 +270,6 @@ cmp.setup({
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
 		{ name = 'vsnip' }, -- For vsnip users.
-		-- { name = 'luasnip' }, -- For luasnip users.
-		-- { name = 'ultisnips' }, -- For ultisnips users.
-		-- { name = 'snippy' }, -- For snippy users.
 	}, {
 		{ name = 'buffer' },
 	})

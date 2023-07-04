@@ -9,7 +9,8 @@ My configuration of Neovim using extensions.
 
 ## External dependencies
 ```
-npm i -g typescript-language-server
+sudo npm i -g typescript-language-server
+sudo npm -g install instant-markdown-d
 rustup component add rust-analyzer
 ```
 
@@ -31,6 +32,7 @@ Install all the vim plug extensions
 4. [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 5. [yuezk/vim-js](https://github.com/yuezk/vim-js)
 6. [maxmellon/vim-jsx-pretty](https://github.com/MaxMEllon/vim-jsx-pretty)
+7. [vim-instant-markdown](https://github.com/instant-markdown/vim-instant-markdown)
 
 ## Resources
 * [Getting started using Lua in Neovim](https://github.com/nanotee/nvim-lua-guide#defining-mappings)
