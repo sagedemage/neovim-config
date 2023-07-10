@@ -5,8 +5,11 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
--- Rust Tooling Support
+-- Programming Language Support
+--- Rust Tooling Support
 Plug 'rust-lang/rust.vim'
+--- Zig Tooling Support
+Plug 'ziglang/zig.vim'
 
 -- nvim-cmp (Code Completion)
 Plug 'hrsh7th/cmp-nvim-lsp'

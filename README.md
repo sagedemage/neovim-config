@@ -29,13 +29,14 @@ Install all the vim plug extensions
 
 ## vim plug plugins
 1. [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
-1. [rust-lang/rust.vim](https://github.com/rust-lang/rust.vim) 
-2. [vim-signify](https://github.com/mhinz/vim-signify)
-3. [simrat39/rust-tools.nvim](https://github.com/simrat39/rust-tools.nvim)
-4. [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-5. [yuezk/vim-js](https://github.com/yuezk/vim-js)
-6. [maxmellon/vim-jsx-pretty](https://github.com/MaxMEllon/vim-jsx-pretty)
-7. [vim-instant-markdown](https://github.com/instant-markdown/vim-instant-markdown)
+2. [ziglang/zig.vim](https://github.com/ziglang/zig.vim)
+3. [rust-lang/rust.vim](https://github.com/rust-lang/rust.vim) 
+4. [vim-signify](https://github.com/mhinz/vim-signify)
+5. [simrat39/rust-tools.nvim](https://github.com/simrat39/rust-tools.nvim)
+6. [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+7. [yuezk/vim-js](https://github.com/yuezk/vim-js)
+8. [maxmellon/vim-jsx-pretty](https://github.com/MaxMEllon/vim-jsx-pretty)
+9. [vim-instant-markdown](https://github.com/instant-markdown/vim-instant-markdown)
 
 ## Resources
 * [Getting started using Lua in Neovim](https://github.com/nanotee/nvim-lua-guide#defining-mappings)
