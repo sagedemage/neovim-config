@@ -38,6 +38,10 @@ Install all the vim plug extensions
 8. [maxmellon/vim-jsx-pretty](https://github.com/MaxMEllon/vim-jsx-pretty)
 9. [vim-instant-markdown](https://github.com/instant-markdown/vim-instant-markdown)
 
+## Keybindings
+- To move up in the code completion menu use: `Ctrl-p`
+- To move down in the code completion menu use: `Ctrl-n`
+
 ## Resources
 * [Getting started using Lua in Neovim](https://github.com/nanotee/nvim-lua-guide#defining-mappings)
 * [Everything you need to know to configure neovim using lua](https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua/)
