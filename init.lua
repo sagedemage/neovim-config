@@ -134,5 +134,11 @@ cmp.setup({
 	})
 })
 
+-- Use HJKL in Insert move
+vim.api.nvim_set_keymap('i', '<C-k>', '<Up>', {noremap = true})
+vim.api.nvim_set_keymap('i', '<C-h>', '<Left>', {noremap = true})
+vim.api.nvim_set_keymap('i', '<C-l>', '<Right>', {noremap = true})
+vim.api.nvim_set_keymap('i', '<C-j>', '<Down>', {noremap = true})
+
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
