@@ -143,11 +143,9 @@ vim.api.nvim_set_keymap('i', '<C-j>', '<Down>', {noremap = true})
 -- Clipboard register switcher
 -- - Switch to clipboard register 
 vim.api.nvim_set_keymap('n', '<leader>c', ':set clipboard=unnamedplus<CR>', {noremap = true})
--- nnoremap <leader>c :set clipboard=unnamedplus<CR>
 
 -- - Switch to unamed register
 vim.api.nvim_set_keymap('n', '<leader>u', ':set clipboard=\"\"<CR>', {noremap = true})
--- nnoremap <leader>u :set clipboard=""<CR>
 
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
