@@ -6,9 +6,9 @@ local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
 -- Programming Language Support
---- Rust Tooling Support
+-- - Rust Tooling Support
 Plug 'rust-lang/rust.vim'
---- Zig Tooling Support
+-- - Zig Tooling Support
 Plug 'ziglang/zig.vim'
 
 -- nvim-cmp (Code Completion)
@@ -139,6 +139,15 @@ vim.api.nvim_set_keymap('i', '<C-k>', '<Up>', {noremap = true})
 vim.api.nvim_set_keymap('i', '<C-h>', '<Left>', {noremap = true})
 vim.api.nvim_set_keymap('i', '<C-l>', '<Right>', {noremap = true})
 vim.api.nvim_set_keymap('i', '<C-j>', '<Down>', {noremap = true})
+
+-- Clipboard register switcher
+-- - Switch to clipboard register 
+vim.api.nvim_set_keymap('n', '<leader>c', ':set clipboard=unnamedplus<CR>', {noremap = true})
+-- nnoremap <leader>c :set clipboard=unnamedplus<CR>
+
+-- - Switch to unamed register
+vim.api.nvim_set_keymap('n', '<leader>u', ':set clipboard=\"\"<CR>', {noremap = true})
+-- nnoremap <leader>u :set clipboard=""<CR>
 
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
