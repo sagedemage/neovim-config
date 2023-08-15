@@ -55,6 +55,9 @@ vim.opt.tabstop = 4
 -- Set tab insert space
 vim.opt.shiftwidth = 4
 
+-- Enable line numbers
+vim.wo.number = true
+
 -- Enable automatic running of :RustFmt when you save a buffer
 vim.g["rustfmt_autosave"] = 1
 
