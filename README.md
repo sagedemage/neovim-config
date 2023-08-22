@@ -36,7 +36,7 @@ Install all the vim plug extensions
 6. [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 7. [yuezk/vim-js](https://github.com/yuezk/vim-js)
 8. [maxmellon/vim-jsx-pretty](https://github.com/MaxMEllon/vim-jsx-pretty)
-9. [vim-instant-markdown](https://github.com/instant-markdown/vim-instant-markdown)
+9. [vim-markdown](https://github.com/preservim/vim-markdown)
 
 ## Keybindings
 - To move up in the code completion menu use: `Ctrl-p`

@@ -21,8 +21,9 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
--- Vim Instant Markdown
-Plug('instant-markdown/vim-instant-markdown', {['for'] = 'markdown', ['do'] = 'yarn install'})
+-- Vim Markdown
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
 
 -- vim-signify (git VCS)
 if vim.fn.has('nvim') or vim.fn.has('patch-8.0.902') then 
@@ -64,12 +65,17 @@ vim.g["rustfmt_autosave"] = 1
 -- Open file explorer
 vim.api.nvim_set_keymap('n', '<leader>e', ':Explore<CR>', { noremap = true })
 
--- Disable Instant Markdown Preview Autostart
-vim.g['instant_markdown_autostart'] = 0
+-- Vim Markdown
+-- - Disable folding
+vim.g["vim_markdown_folding_disabled"] = 1
 
--- Instant Markdown Keybinding
-vim.api.nvim_set_keymap('n', '<leader>p', ':InstantMarkdownPreview<CR>', { silent = true })
-vim.api.nvim_set_keymap('n', '<leader>s', ':InstantMarkdownStop<CR>', { silent = true })
+-- - Enable conceal
+local set = vim.opt
+set.conceallevel = 2
+
+-- - ge command to follow named anchors in 
+-- - links of the form file#anchor or just #anchor
+vim.g["vim_markdown_follow_anchor"] = 1
 
 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 -- delays and poor user experience.
