@@ -43,5 +43,6 @@ Install all the vim plug extensions
 - To move down in the code completion menu use: `Ctrl-n`
 
 ## Resources
-* [Getting started using Lua in Neovim](https://github.com/nanotee/nvim-lua-guide#defining-mappings)
-* [Everything you need to know to configure neovim using lua](https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua/)
+* [Lua-guide by Neovim](https://neovim.io/doc/user/lua-guide.html)
+* [Everything you need to know to configure neovim using lua by Heiker Curiel](https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua/)
+
