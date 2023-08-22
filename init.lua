@@ -47,8 +47,8 @@ Plug 'maxmellon/vim-jsx-pretty'
 -- Initialize plugin system
 vim.call('plug#end')
 
--- Set map leader to space
-vim.g.mapleader = vim.api.nvim_replace_termcodes('<space>', true, true, true)
+-- Set leader key to space
+vim.g.mapleader = ' '
 
 -- 4 spaces for tab
 vim.opt.tabstop = 4
