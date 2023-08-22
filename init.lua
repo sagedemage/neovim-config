@@ -63,7 +63,7 @@ vim.wo.number = true
 vim.g["rustfmt_autosave"] = 1
 
 -- Open file explorer
-vim.api.nvim_set_keymap('n', '<leader>e', ':Explore<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>e', ':Explore<CR>', { noremap = true })
 
 -- Vim Markdown
 -- - Disable folding
@@ -144,17 +144,18 @@ cmp.setup({
 })
 
 -- Use HJKL in Insert move
-vim.api.nvim_set_keymap('i', '<C-k>', '<Up>', {noremap = true})
-vim.api.nvim_set_keymap('i', '<C-h>', '<Left>', {noremap = true})
-vim.api.nvim_set_keymap('i', '<C-l>', '<Right>', {noremap = true})
-vim.api.nvim_set_keymap('i', '<C-j>', '<Down>', {noremap = true})
+-- vim.keymap.set()
+vim.keymap.set('i', '<C-k>', '<Up>', {noremap = true})
+vim.keymap.set('i', '<C-h>', '<Left>', {noremap = true})
+vim.keymap.set('i', '<C-l>', '<Right>', {noremap = true})
+vim.keymap.set('i', '<C-j>', '<Down>', {noremap = true})
 
 -- Clipboard register switcher
 -- - Switch to clipboard register 
-vim.api.nvim_set_keymap('n', '<leader>c', ':set clipboard=unnamedplus<CR>', {noremap = true})
+vim.keymap.set('n', '<leader>c', ':set clipboard=unnamedplus<CR>', {noremap = true})
 
 -- - Switch to unamed register
-vim.api.nvim_set_keymap('n', '<leader>u', ':set clipboard=\"\"<CR>', {noremap = true})
+vim.keymap.set('n', '<leader>u', ':set clipboard=\"\"<CR>', {noremap = true})
 
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
