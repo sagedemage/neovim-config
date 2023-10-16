@@ -2,13 +2,13 @@
 My configuration of Neovim using extensions.
 
 ## Build Neovim on Linux (Optional)
-[build_neovim_on_linux](./build_neovim_on_linux.md)
+[build_neovim_on_linux](./docs/build_neovim_on_linux.md)
 
 ## Setup Instructions for Linux
-[setup_instructions_for_linux](./setup_instructions_for_linux.md)
+[setup_instructions_for_linux](./docs/setup_instructions_for_linux.md)
 
 ## Setup Instructions for Windows
-[setup_instructions_for_windows](./setup_instructions_for_windows.md)
+[setup_instructions_for_windows](./docs/setup_instructions_for_windows.md)
 
 ## External dependencies
 ```
