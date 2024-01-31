@@ -116,7 +116,9 @@ local opts = {
 	},
 } -- end opts
 
+-- LSP Support
 require('rust-tools').setup(opts)
+require'lspconfig'.gopls.setup{}
 
 -- Set up nvim-cmp.
 local cmp = require 'cmp'
