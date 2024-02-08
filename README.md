@@ -12,8 +12,7 @@ My configuration of Neovim using extensions.
 
 ## External dependencies
 ```
-sudo npm i -g typescript-language-server
-sudo npm -g install instant-markdown-d
+sudo npm i -g typescript typescript-language-server instant-markdown-d pyright
 rustup component add rust-analyzer
 ```
 
@@ -30,13 +29,11 @@ Install all the vim plug extensions
 ## vim plug plugins
 1. [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 2. [ziglang/zig.vim](https://github.com/ziglang/zig.vim)
-3. [rust-lang/rust.vim](https://github.com/rust-lang/rust.vim) 
-4. [vim-signify](https://github.com/mhinz/vim-signify)
-5. [simrat39/rust-tools.nvim](https://github.com/simrat39/rust-tools.nvim)
-6. [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-7. [yuezk/vim-js](https://github.com/yuezk/vim-js)
-8. [maxmellon/vim-jsx-pretty](https://github.com/MaxMEllon/vim-jsx-pretty)
-9. [vim-markdown](https://github.com/preservim/vim-markdown)
+3. [vim-signify](https://github.com/mhinz/vim-signify)
+4. [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+5. [yuezk/vim-js](https://github.com/yuezk/vim-js)
+6. [maxmellon/vim-jsx-pretty](https://github.com/MaxMEllon/vim-jsx-pretty)
+7. [vim-markdown](https://github.com/preservim/vim-markdown)
 
 ## Keybindings
 - To move up in the code completion menu use: `Ctrl-p`
@@ -45,4 +42,5 @@ Install all the vim plug extensions
 ## Resources
 * [Lua-guide by Neovim](https://neovim.io/doc/user/lua-guide.html)
 * [Everything you need to know to configure neovim using lua by Heiker Curiel](https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua/)
+* [Neovim lsp server configurations](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md)
 
