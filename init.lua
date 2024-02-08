@@ -6,8 +6,6 @@ local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
 -- Programming Language Support
--- - Rust Tooling Support
-Plug 'rust-lang/rust.vim'
 -- - Zig Tooling Support
 Plug 'ziglang/zig.vim'
 
@@ -34,9 +32,6 @@ end
 
 -- Neovim lspconfig
 Plug "neovim/nvim-lspconfig"
-
--- Rust tools to extend rust analyzer
-Plug 'simrat39/rust-tools.nvim'
 
 -- Vim JS
 Plug 'yuezk/vim-js'
@@ -81,44 +76,15 @@ vim.g["vim_markdown_follow_anchor"] = 1
 -- delays and poor user experience.
 vim.opt.updatetime = 300
 
--- Rust tools configuration
-local opts = {
-	tools = { -- rust-tools options
-		-- how to execute terminal commands
-		-- options right now: termopen / quickfix
-		executor = require("rust-tools.executors").termopen,
-
-		-- callback to execute once rust-analyzer is done initializing the workspace
-		-- The callback receives one parameter indicating the `health` of the server: "ok" | "warning" | "error"
-		on_initialized = nil,
-
-		-- automatically call RustReloadWorkspace when writing to a Cargo.toml file.
-		reload_workspace_from_cargo_toml = true,
-	}, -- end tools
-
-	-- all the opts to send to nvim-lspconfig
-	-- these override the defaults set by rust-tools.nvim
-	-- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
-	-- rust-analyzer options
-	server = {
-		-- standalone file support
-		-- setting it to false may improve startup time
-		standalone = true,
-	},
-
-	-- debugging stuff
-	dap = {
-		adapter = {
-			type = "executable",
-			command = "lldb-vscode",
-			name = "rt_lldb",
-		},
-	},
-} -- end opts
-
 -- LSP Support
-require('rust-tools').setup(opts)
+-- - Go
 require'lspconfig'.gopls.setup{}
+-- - Rust
+require'lspconfig'.rust_analyzer.setup{}
+-- - JavaScript/TypeScript
+require'lspconfig'.tsserver.setup{}
+-- - Python
+require'lspconfig'.pyright.setup{}
 
 -- Set up nvim-cmp.
 local cmp = require 'cmp'
