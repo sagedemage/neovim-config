@@ -24,9 +24,9 @@ Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
 
 -- vim-signify (git VCS)
-if vim.fn.has('nvim') or vim.fn.has('patch-8.0.902') then 
+if vim.fn.has('nvim') or vim.fn.has('patch-8.0.902') then
 	Plug 'mhinz/vim-signify'
-else 
+else
 	Plug('mhinz/vim-signify', { branch = 'legacy' })
 end
 
@@ -68,7 +68,7 @@ vim.g["vim_markdown_folding_disabled"] = 1
 local set = vim.opt
 set.conceallevel = 2
 
--- - ge command to follow named anchors in 
+-- - ge command to follow named anchors in
 -- - links of the form file#anchor or just #anchor
 vim.g["vim_markdown_follow_anchor"] = 1
 
@@ -78,13 +78,17 @@ vim.opt.updatetime = 300
 
 -- LSP Support
 -- - Go
-require'lspconfig'.gopls.setup{}
+require 'lspconfig'.gopls.setup {}
 -- - Rust
-require'lspconfig'.rust_analyzer.setup{}
+require 'lspconfig'.rust_analyzer.setup {}
 -- - JavaScript/TypeScript
-require'lspconfig'.tsserver.setup{}
+require 'lspconfig'.tsserver.setup {}
 -- - Python
-require'lspconfig'.pyright.setup{}
+require 'lspconfig'.pyright.setup {}
+-- - C/C++
+require('lspconfig').clangd.setup {
+	cmd = {"clangd", "-header-insertion=never"}
+}
 
 -- Set up nvim-cmp.
 local cmp = require 'cmp'
@@ -113,17 +117,18 @@ cmp.setup({
 
 -- Use HJKL in Insert move
 -- vim.keymap.set()
-vim.keymap.set('i', '<C-k>', '<Up>', {noremap = true})
-vim.keymap.set('i', '<C-h>', '<Left>', {noremap = true})
-vim.keymap.set('i', '<C-l>', '<Right>', {noremap = true})
-vim.keymap.set('i', '<C-j>', '<Down>', {noremap = true})
+vim.keymap.set('i', '<C-k>', '<Up>', { noremap = true })
+vim.keymap.set('i', '<C-h>', '<Left>', { noremap = true })
+vim.keymap.set('i', '<C-l>', '<Right>', { noremap = true })
+vim.keymap.set('i', '<C-j>', '<Down>', { noremap = true })
 
 -- Clipboard register switcher
--- - Switch to clipboard register 
-vim.keymap.set('n', '<leader>c', ':set clipboard=unnamedplus<CR>', {noremap = true})
+-- - Switch to clipboard register
+vim.keymap.set('n', '<leader>c', ':set clipboard=unnamedplus<CR>', { noremap = true })
 
 -- - Switch to unamed register
-vim.keymap.set('n', '<leader>u', ':set clipboard=\"\"<CR>', {noremap = true})
+vim.keymap.set('n', '<leader>u', ':set clipboard=\"\"<CR>', { noremap = true })
 
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
+

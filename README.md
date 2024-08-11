@@ -15,12 +15,22 @@ My configuration of Neovim using extensions.
 sudo npm i -g typescript typescript-language-server instant-markdown-d pyright
 rustup component add rust-analyzer
 ```
+On Ubuntu:
+```
+sudo apt install clangd
+```
 
 ## Install vim extensions
 
 Install all the vim plug extensions
 ```
 :PlugInstall
+```
+
+## CMake Project with Clang
+Create a build directory with this command to generate a compile_commands.json.
+```
+cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -B build
 ```
 
 ## Plugin Manager
