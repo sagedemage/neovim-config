@@ -135,6 +135,9 @@ vim.keymap.set('n', '<leader>c', ':set clipboard=unnamedplus<CR>', { noremap = t
 -- - Switch to unamed register
 vim.keymap.set('n', '<leader>u', ':set clipboard=\"\"<CR>', { noremap = true })
 
+-- - Run clang tidy
+vim.keymap.set('n', '<leader><S-k>', ':%!clang-format<CR>', { noremap = true})
+
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
