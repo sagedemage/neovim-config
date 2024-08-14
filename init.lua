@@ -49,7 +49,13 @@ vim.g.mapleader = ' '
 vim.opt.tabstop = 4
 
 -- Set tab insert space
-vim.opt.shiftwidth = 4
+vim.opt.shiftwidth = 0
+
+-- How wide an indentation is suppoed to span
+vim.opt.softtabstop = 0
+
+-- Indenting is always done using space characters only
+vim.opt.expandtab = true
 
 -- Enable line numbers
 vim.wo.number = true
