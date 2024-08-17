@@ -63,8 +63,7 @@ vim.wo.number = true
 -- Enable automatic running of :RustFmt when you save a buffer
 vim.g["rustfmt_autosave"] = 1
 
--- Open file explorer
-vim.keymap.set('n', '<leader>e', ':Explore<CR>', { noremap = true })
+
 
 -- Vim Markdown
 -- - Disable folding
@@ -127,6 +126,9 @@ vim.keymap.set('i', '<C-k>', '<Up>', { noremap = true })
 vim.keymap.set('i', '<C-h>', '<Left>', { noremap = true })
 vim.keymap.set('i', '<C-l>', '<Right>', { noremap = true })
 vim.keymap.set('i', '<C-j>', '<Down>', { noremap = true })
+
+-- Open file explorer
+vim.keymap.set('n', '<leader>e', ':Texplore<CR>', { noremap = true })
 
 -- Clipboard register switcher
 -- - Switch to clipboard register
