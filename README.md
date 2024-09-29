@@ -43,7 +43,8 @@ cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -B build
 4. [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 5. [yuezk/vim-js](https://github.com/yuezk/vim-js)
 6. [maxmellon/vim-jsx-pretty](https://github.com/MaxMEllon/vim-jsx-pretty)
-7. [vim-markdown](https://github.com/preservim/vim-markdown)
+7. [preservim/vim-markdown](https://github.com/preservim/vim-markdown)
+8. [tikhomirov/vim-glsl](https://github.com/tikhomirov/vim-glsl)
 
 ## Keybindings
 - To move up in the code completion menu use: `Ctrl-p`

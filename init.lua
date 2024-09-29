@@ -39,6 +39,9 @@ Plug 'yuezk/vim-js'
 -- Vim JSX Pretty
 Plug 'maxmellon/vim-jsx-pretty'
 
+-- Vim GLSL
+Plug 'tikhomirov/vim-glsl'
+
 -- Initialize plugin system
 vim.call('plug#end')
 
